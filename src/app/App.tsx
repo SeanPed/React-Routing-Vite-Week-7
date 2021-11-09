@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Stuff from './pages/Stuff/Stuff';
-import { BrowserRouter, Routes, Route, Link,} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App(): JSX.Element {
   return (
