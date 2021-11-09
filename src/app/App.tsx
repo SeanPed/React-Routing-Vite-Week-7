@@ -1,15 +1,20 @@
+import { Http2ServerRequest } from 'http2';
 import React, { useState } from 'react';
-import logo from './logo.svg';
-import styles from './App.module.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Stuff from './pages/Stuff/Stuff';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0);
-
   return (
     <BrowserRouter>
+      Landingpage
+      <Link to="about">About Link </Link>
+      <Routes>
+        <Route path="/" element={<p>Landingpage</p>} />
+        <Route path="about" element={<Link to="/other">Go to other</Link>} />
+        <Route path="other" element={<h3>Still Hello World!</h3>} />
+        <Route path="/stuff" element={<Stuff />}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;
