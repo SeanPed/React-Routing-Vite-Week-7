@@ -11,6 +11,12 @@ function Tag({ value }: TagProps): JSX.Element {
 export default Tag;
 
 const StyledTag = styled.li`
-  color: #000;
-  background-color: hotpink;
+  list-style: none;
+  background-color: #e3f6f5;
+  color: #2d334a;
+  padding: 3px 5px;
+  display: inline-block;
+  border-radius: 5px;
+  border: 2px #272343 solid;
+  font-weight: bolder;
 `;
