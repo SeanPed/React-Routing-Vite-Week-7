@@ -1,7 +1,6 @@
-import { Http2ServerRequest } from 'http2';
 import React, { useState } from 'react';
 import Stuff from './pages/Stuff/Stuff';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link,} from 'react-router-dom';
 
 function App(): JSX.Element {
   return (
@@ -12,7 +11,9 @@ function App(): JSX.Element {
         <Route path="/" element={<p>Landingpage</p>} />
         <Route path="about" element={<Link to="/other">Go to other</Link>} />
         <Route path="other" element={<h3>Still Hello World!</h3>} />
-        <Route path="/stuff" element={<Stuff />}></Route>
+        <Route path="/stuff">
+          <Route path=":thing" element={<Stuff />}></Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
