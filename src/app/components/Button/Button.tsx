@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import React from 'react';
 import styled from 'styled-components';
-import classes from './Button.module.css';
 
 type ButtonProps = {
   children: ReactNode;
